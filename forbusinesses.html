@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>The Yerli.</title>
+    <link rel="icon" href="assets/Y.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Google fonts-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Georgia"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <!-- JS -->
+    <script src="script.js"></script>
+
+    <!-- CSS -->
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #002B21;
+        margin: 0;
+      }
+
+      div {
+        display: table;
+      }
+      /*---------------------NAVBAR---------------------*/
+      .navbar {
+        overflow: hidden;
+        background-color: #00EA9C;
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        z-index: 3;
+      }
+      #y {
+        padding-top: 14px;
+        font-size: 25px;
+        font-weight: normal;
+        float: left;
+        margin: 0;
+        text-decoration: none;
+        font-family: "Oleo Script Swash Caps", serif !important;
+      }
+      @media only screen and (max-width: 650px) {
+        #links {
+          display: none;
+        }
+        #icon-bars {
+          display: block;
+        }
+        #icon-x {
+          display: none;
+        }
+        #links-small {
+          font-size: 15px !important;
+          display: none;
+        }
+        #links-small {
+          font-size: 15px !important;
+          display: none;
+        }
+        #links-small ul {
+          padding-top: 10px;
+          padding-bottom: 8px;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+        }
+        #links-small li {
+          padding: 1%;
+        }
+      }
+      @media only screen and (min-width: 650px) {
+        #links-small {
+          display: none;
+        }
+        #links {
+          float: right;
+          padding-top: 18px;
+        }
+        .dropbtn {
+          font-size: 17px;
+        }
+        #icon-x,
+        #icon-bars {
+          display: none;
+        }
+      }
+      #icon-bars,
+      #icon-x {
+        color: white;
+        float: right;
+        padding: 14px 14px;
+      }
+      .dropbtn {
+        border: none;
+        outline: none;
+        color: white;
+        text-decoration: none;
+        padding: 14px 14px;
+      }
+      .dropbtn:hover {
+        color: black;
+      }
+      .sticky {
+        position: fixed;
+        top: 0;
+        overflow: visible;
+      }
+      /*---------------------END NAVBAR---------------------*/
+
+      /*---------------------FOOTER---------------------*/
+
+      .quick-links {
+        background-color: #F8F8F8;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .box {
+        flex: 1 1 150px; /*  Stretching: */
+        margin: 5px;
+        padding-bottom: 2%;
+        padding-left: 2%;
+        margin-top: 0;
+        
+      }
+      .footer-title {
+        font-weight: bold;
+        padding-bottom: 3px;
+        margin-bottom: 1px;
+      }
+      .slogan:hover {
+        text-decoration: none !important;
+      }
+      #theYerli {
+        font-weight: normal;
+        color: #30C591;
+        font-family: "Oleo Script Swash Caps", serif;
+        font-size: 18px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+      }
+      .quick-links a {
+        text-decoration: none;
+        color: black;
+      }
+      .hide {
+        text-align: right;
+        margin-right: 5%;
+      }
+      .quick-links a:hover {
+        text-decoration: underline;
+      }
+      @media screen and (max-width: 750px) {
+        .hide {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .box {
+          flex: 1 1 100%;
+        }
+      }
+      /*---------------------END FOOTER---------------------*/
+
+      /*-----------------------BUTTONS----------------------*/
+      .cartoon-button {
+        top: 27vw;
+        position: relative;
+        background-color: white;
+        border: 1.5px solid #002B21;
+        border-radius: 6px;
+        padding: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        font-weight: bold;
+        font-size: medium;
+        box-shadow: 0 4px 0 0 #ffffff, 0 4px 0 1.5px #002B21;
+        outline: none;
+      }
+      @media screen and (max-width: 550px) {
+        .cartoon-button {
+          top: 40vw;
+        }
+      }
+      .cartoon-button:hover {
+        background-color: #002B21;
+        color: white;
+      }
+      .cartoon-button:active {
+        background-color: #002B21;
+        box-shadow: 0 2px #002B21;
+        transform: translateY(1px);
+      }
+      .fake-button {
+        background-color: white;
+        border: 1.5px solid #002B21;
+        border-radius: 6px;
+        outline: none;
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+        margin-left: 8%;
+        font-size: 22px;
+        margin-top: 15px;
+      }
+      /*---------------------END BUTTONS--------------------*/
+      .blue-background,
+      .container,
+      .white,
+      .black {
+        width: 100%;
+      }
+      .blue-background {
+        background-image: url("assets/forbusinessesbackground.png");
+        height: 50vw;
+        background-size: 100% 100%;
+      }
+      .container {
+        position: relative;
+      }
+      .white {
+        color: white;
+        position: absolute;
+        z-index: 2;
+      }
+      .black {
+        color: black;
+        position: absolute;
+        z-index: 1;
+        top: 4px;
+        left: -4px;
+      }
+      @media screen and (max-width: 600px) {
+        .white {
+          top: -28px;
+        }
+        .black {
+          top: -25.5px;
+          left: -2.5px;
+        }
+        .black h1,
+        .white h1 {
+          font-size: 40px;
+        }
+        .blue-background {
+          height: 75vw;
+        }
+      }
+      .how-it-works {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .block1,
+      .block2,
+      .block3 {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 65% 55%;
+        max-width: 21%;
+        min-width: 20%;
+        padding: 5%;
+        font-size: 17px;
+        flex: 1 1 150px;
+      }
+      @media screen and (max-width: 700px) {
+        .block1,
+        .block2,
+        .block3 {
+          min-width: 75%;
+          background-size: 70% 65%;
+        }
+        .block1 img,
+        .block2 img,
+        .block3 img {
+          width: 50%;
+          height: auto;
+        }
+      }
+      .block1 {
+        background-image: url("assets/forbusinessesblob1.png");
+      }
+      .block2 {
+        background-image: url("assets/forbusinessesblob2.png");
+      }
+      .block3 {
+        background-image: url("assets/forbusinessesblob3.png");
+      }
+      .block1 img,
+      .block2 img,
+      .block3 img {
+        width: 200px;
+        margin-left: 15%;
+      }
+      h1 {
+        font-weight: normal;
+        font-family: "Oleo Script Swash Caps", serif;
+        text-align: center;
+        font-size: 6vw;
+      }
+      h2 {
+        font-weight: normal;
+        font-size: 3vw;
+      }
+      h3 {
+        font-family: "Georgia", serif;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <!---- Navbar ----->
+    <div class="navbar sticky">
+      <a class="dropbtn" href="index.html"
+        ><h1 class="dropbtn" id="y">
+          the Yerli.
+        </h1></a
+      >
+
+      <a id="icon-bars" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a id="icon-x" onclick="myFunction()">
+        <i class="fa fa-times"></i>
+      </a>
+      <div id="links">
+        <a class="dropbtn" href="aboutus.html">About Us</a>
+
+        <a class="dropbtn" href="forbusinesses.html">For Businesses</a>
+
+        <a class="dropbtn" href="forusers.html">For Users</a>
+      </div>
+      <div id="links-small">
+        <br /><br />
+        <ul>
+          <li>
+            <a class="dropbtn" href="aboutus.html">About Us</a>
+          </li>
+          <li>
+            <a class="dropbtn" href="forbusinesses.html">For Businesses</a>
+          </li>
+          <li>
+            <a class="dropbtn" href="forusers.html">For Users</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!---- End Navbar ----->
+    <!---- Sign up ---->
+    <div class="blue-background">
+      <br /><br /><br /><br /><br />
+      <center>
+        <div class="container">
+          <div class="black">
+            <h1>get your business on</h1>
+            <h1>the Yerli app</h1>
+          </div>
+          <div class="white">
+            <h1>get your business on</h1>
+            <h1>the Yerli app</h1>
+          </div>
+          <a href="https://share.hsforms.com/1xZEWbTvFRzOyuCjklBttqg5c7qf">
+            <button class="cartoon-button" type="button">Sign up now ➜</button>
+          </a>
+        </div>
+      </center>
+    </div>
+    <!---- End Sign up ---->
+    <br /><br />
+    <!---- How it works ---->
+    <button class="fake-button" type="button">How it works:</button>
+    <br />
+    <div class="how-it-works">
+      <div class="block1">
+        <h3>1.</h3>
+        <img
+          src="assets/forbusinesses1.png"
+          alt="Sign up form graphic"
+        />
+        <p>Sign up above for free.</p>
+      </div>
+      <div class="block2">
+        <h3>2.</h3>
+        <img
+          src="assets/forbusinesses2.png"
+          alt="The Yerli feed graphic"
+        />
+        <p>Once you get approved, your business profile appears on the Yerli feed and map screens.</p>
+      </div>
+      <div class="block3">
+        <h3>3.</h3>
+        <img
+          src="assets/forbusinesses3.png"
+          alt="Local graphic"
+        />
+        <p>
+          Locals and visitors to your town learn your story and support your business.
+        </p>
+      </div>
+    </div>
+    <!---- End How it works ---->
+    <br /><br /><br /><br /><br />
+    <!---- Footer ---->
+    <footer>
+      <div class="quick-links">
+        <div class="box">
+          <p class="footer-title">Social</p>
+          <a href="https://www.instagram.com/theyerliapp/">Instagram</a> <br />
+          <a href="https://www.facebook.com/TheYerliApp">Facebook</a><br />
+          <a href="https://www.youtube.com/channel/UCutRDOQJikHi6-Z0P-m2JYg"
+            >Wednesday Talks</a
+          ><br />
+          <a
+            href="https://dailycollegian.com/2020/11/two-passionate-umass-students-develop-an-app-to-support-amherst-businesses/"
+            >The Daily Collegian</a
+          ><br />
+        </div>
+        <div class="box">
+          <p class="footer-title">For Businesses</p>
+          <a href="forbusinesses.html">Sign Up</a> <br />
+          <a href="mailto:contact@theyerli.com">Contact Us</a><br />
+        </div>
+        <div class="box">
+          <p class="footer-title">For Users</p>
+          <a href="suggestabusiness.html">Suggest a Business</a><br />
+          <a href="https://app.theyerli.com/">Web App</a><br />
+          <a href="aboutus.html">About Us</a>
+        </div>
+        <div class="box hide">
+          <p id="theYerli">the Yerli.</p>
+          <a class="slogan">Look Local.</a> <br />
+          <a class="slogan">Feel Local.</a><br />
+          <a class="slogan">Experience Local.</a><br />
+        </div>
+      </div>
+    </footer>
+    <!---- End Footer ---->
+  </body>
+</html>

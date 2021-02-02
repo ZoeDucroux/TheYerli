@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>The Yerli.</title>
+    <link rel="icon" href="assets/Y.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Google fonts-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Georgia"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/header-footer.css" />
+    <script src="script.js"></script>
+    <style>
+      body {
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #002B21;
+        margin: 0;
+      }
+
+      /*---------------------NAVBAR---------------------*/
+      .navbar {
+        z-index: 1;
+        overflow: hidden;
+        background-color: #00EA9C;
+        width: 100%;
+        height: 50px;
+      }
+      #y {
+        padding-top: 14px;
+        font-size: 25px;
+        font-weight: normal;
+        float: left;
+        margin: 0;
+        text-decoration: none;
+        font-family: "Oleo Script Swash Caps", serif !important;
+      }
+      @media only screen and (max-width: 650px) {
+        #links {
+          display: none;
+        }
+        #icon-bars {
+          display: block;
+          color: white;
+          float: right;
+          padding: 14px 14px;
+        }
+        #icon-x {
+          display: none;
+          color: white;
+          float: right;
+          padding: 14px 14px;
+        }
+        .dropbtn {
+          border: none;
+          outline: none;
+          color: white;
+          text-decoration: none;
+          padding: 14px 14px;
+        }
+        #links-small {
+          font-size: 15px !important;
+          display: none;
+        }
+        #links-small ul {
+          padding-top: 10px;
+          padding-bottom: 8px;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+        }
+        #links-small li {
+          padding: 1%;
+        }
+      }
+      @media only screen and (min-width: 650px) {
+        #links-small {
+          display: none;
+        }
+        #links {
+          float: right;
+          padding-top: 18px;
+        }
+        .dropbtn {
+          border: none;
+          outline: none;
+          color: white;
+          padding: 14px 14px;
+          background-color: inherit;
+          font-size: 17px;
+          text-decoration: none;
+        }
+        #icon-x,
+        #icon-bars {
+          display: none;
+          color: white;
+        }
+      }
+
+      .dropbtn:hover {
+        color: black;
+      }
+
+      .sticky {
+        position: fixed;
+        top: 0;
+        overflow: visible;
+      }
+      /*---------------------END NAVBAR---------------------*/
+
+      /*---------------------FOOTER---------------------*/
+
+      .quick-links {
+        background-color: #F8F8F8;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .box {
+        flex: 1 1 150px; /*  Stretching: */
+        margin: 5px;
+        padding-bottom: 2%;
+        padding-left: 2%;
+        margin-top: 0;
+        
+      }
+      .footer-title {
+        font-weight: bold;
+        padding-bottom: 3px;
+        margin-bottom: 1px;
+      }
+      .slogan:hover {
+        text-decoration: none !important;
+      }
+      #theYerli {
+        font-weight: normal;
+        color: #30C591;
+        font-family: "Oleo Script Swash Caps", serif;
+        font-size: 18px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+      }
+      .quick-links a {
+        text-decoration: none;
+        color: black;
+      }
+      .hide {
+        text-align: right;
+        margin-right: 5%;
+      }
+      .quick-links a:hover {
+        text-decoration: underline;
+      }
+      @media screen and (max-width: 750px) {
+        .hide {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .box {
+          flex: 1 1 100%;
+        }
+      }
+      /*---------------------END FOOTER---------------------*/
+      /*----------------------BUTTONS-----------------------*/
+      .cartoon-button {
+        background-color: white;
+        border: 1.5px solid #002B21;
+        border-radius: 6px;
+        padding: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        font-weight: bold;
+        font-size: medium;
+        box-shadow: 0 4px 0 0 #ffffff, 0 4px 0 1.5px #002B21;
+        outline: none;
+      }
+      .fake-button {
+        background-color: white;
+        border: 1.5px solid #002B21;
+        border-radius: 6px;
+        padding: 1%;
+        outline: none;
+        font-size: 18px;
+      }
+      .cartoon-button:hover {
+        background-color: #002B21;
+        color: white;
+      }
+      .cartoon-button:active {
+        background-color: #002B21;
+        box-shadow: 0 2px #002B21;
+        transform: translateY(1px);
+      }
+      .download-button {
+        width: 50%;
+        background-color: black;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        box-shadow: 0 4px 0 0 #ffffff, 0 4px 0 1.5px #002B21;
+        outline: none;
+      }
+      .download-button:active {
+        background-color: black;
+        box-shadow: 0 2px black;
+        transform: translateY(1px);
+      }
+      .fake-button-blue {
+        background-color: #30C591;
+        border: none;
+        border-radius: 6px;
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+        outline: none;
+        font-size: 22px;
+        margin-top: 15px;
+        color: white;
+      }
+      input[type="submit"] {
+        -webkit-appearance: none;
+      }
+      /*---------------------END BUTTONS--------------------*/
+      div {
+        display: table;
+      }
+      #photo {
+        top: 0;
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 1) 75%
+          ),
+          url("assets/indexbackground1.png");
+        background-size: cover;
+        width: 100%;
+        height: auto;
+      }
+      #featured {
+        background-image: url("assets/indexbackground2.png");
+        width: 100%;
+        background-size: cover;
+      }
+      #logo {
+        text-align: center;
+        font-family: "Oleo Script Swash Caps", serif;
+        color: #30C591 !important;
+        font-size: 10vw;
+        font-weight: normal !important;
+        margin-top: 0px;
+        padding-top: 21%;
+        padding-bottom: 18%;
+      }
+
+      #intro p {
+        text-align: justify;
+        size: 16px;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      @media screen and (max-width: 700px) {
+        #logo {
+          padding-top: 35%;
+        }
+      }
+      .beta-tester {
+        width: 100%;
+      }
+      .beta-tester p {
+        text-align: center;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      .block1,
+      .block2 {
+        float: left;
+        display: table;
+        padding: 3%;
+      }
+      
+      .block2 {
+        max-width: 24%;
+        min-width: 5%;
+      }
+      
+      @media screen and (min-width: 600px) {
+        .block1 img{
+          width: 70%;
+          margin-left: 15%;
+        }
+        .block1 {
+        max-width: 40%;
+        min-width: 20%;
+      }
+      }
+      @media screen and (max-width: 600px){
+        .block1 img{
+          width: 90%;
+        }
+        .block1{
+          margin-left: 5%;
+          width: 90%;
+        }
+      }
+      .block2 img{
+        width: 100%;
+      }
+      .block2 img,
+      .block1 img {
+        margin-left: 0px;
+        margin-right: 3%;
+        margin-bottom: 5%;
+      }
+      h2 {
+        font-weight: normal;
+        font-size: 22px;
+      }
+      h3 {
+        font-family: "Oleo Script Swash Caps", serif !important;
+        font-size: 26px;
+        font-weight: normal;
+      }
+      #app-feed {
+        width: 60%;
+        padding-top: 20%;
+      }
+      @media screen and (max-width: 700px) {
+        #app-feed {
+          width: 100%;
+          padding-top: 15%;
+        }
+        .download-table {
+          float: none;
+          padding-top: 0;
+          margin-top: -50px;
+          margin-bottom: 50px;
+          width: 90%;
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+      }
+      @media screen and (min-width: 700px) {
+        .download-table {
+          float: right;
+          width: 35%;
+          margin-top: 25%;
+          margin-right: 2%;
+          margin-bottom: 5%;
+        }
+      }
+      .download-img {
+        width: 100%;
+      }
+      .download-table td {
+        padding-top: 10%;
+      }
+      .sign-up {
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+      @media screen and (max-width: 1000px) {
+        .video-responsive {
+          z-index: 0;
+          display: block;
+          position: relative;
+          padding-bottom: 56.25%;
+          padding-top: 30px;
+          height: 0;
+          overflow: hidden;
+        }
+        .video-responsive iframe,
+        .video-responsive object,
+        .video-responsive embed {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .video-parent {
+          width: 80%;
+        }
+      }
+      @media screen and (min-width: 1000px) {
+        .video-responsive {
+          z-index: 0;
+          display: block;
+          position: relative;
+          padding-bottom: 56.25%;
+          padding-top: 30px;
+          height: 0;
+          overflow: hidden;
+        }
+        .video-responsive iframe,
+        .video-responsive object,
+        .video-responsive embed {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .video-parent {
+          width: 30%;
+          margin-top: 2.5%;
+          margin-left: 5%;
+          float: left;
+        }
+        #intro p{
+          text-align: justify;
+          float: left;
+          width: 60%;
+          margin-top: 0;
+          margin-left: 2.5%;
+          margin-right: 2.5%;
+        }
+      }
+      .para{
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!---- Navbar ---->
+    <div class="navbar sticky">
+      <a class="dropbtn" href="index.html"
+        ><h1 class="dropbtn" id="y">
+          the Yerli.
+        </h1></a
+      >
+
+      <a id="icon-bars" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a id="icon-x" onclick="myFunction()">
+        <i class="fa fa-times"></i>
+      </a>
+      <div id="links">
+        <a class="dropbtn" href="aboutus.html">About Us</a>
+
+        <a class="dropbtn" href="forbusinesses.html">For Businesses</a>
+
+        <a class="dropbtn" href="forusers.html">For Users</a>
+      </div>
+      <div id="links-small">
+        <br /><br />
+        <ul>
+          <li>
+            <a class="dropbtn" href="aboutus.html">About Us</a>
+          </li>
+          <li>
+            <a class="dropbtn" href="forbusinesses.html">For Businesses</a>
+          </li>
+          <li>
+            <a class="dropbtn" href="forusers.html">For Users</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!---- End Navbar ---->
+    <!---- Intro ---->
+    <div id="photo">
+      <h1 id="logo">the Yerli.</h1>
+    </div>
+    <div id="intro">
+      <center>
+        <div class="video-parent">
+          <div class="video-responsive">
+            <iframe
+              width="1120"
+              height="630"
+              src="https://www.youtube.com/embed/hbRSreKa7o0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </center>
+      
+      <p><b>
+        Here to help our nation’s small business entrepreneurs
+      </b></p>
+      <p class="para">
+        The Yerli was founded with a vision to support local entrepreneurs in every community along their difficult journeys. We understand that they have poured everything they have to create their vision at the expense of their life savings, relationships, and sweat equity. An entire portion of the U.S. economy exists to support these entrepreneurs, but driven by profits have forgotten who they were founded to help. We want to bring the focus back on our entrepreneurs, now and always. 
+      </p>
+      <p><b>
+        Here to help communities reconnect in a disconnected world
+      </b></p>
+      <p class="para">
+        Having recently encountered a novel virus that led to a global pandemic and to social disconnect, disconnection has become the new normal. What is needed to regain normality is not only a way to virtually connect, but to create a sense of affiliation and community. To join something bigger than each individual that can change the lives of humans on a personal scale: collective-personal connection. The Yerli is aiming to reconnect people to normalcy by mending what built people in the start: their communities. Although it seems like the world has changed forever, we can and will return to a better future, The Yerli just wants to help play its part in catalyzing that.
+      </p>
+    </div>
+    <!---- End Intro ---->
+    <!---- For businesses and users ---->
+    <div class="block1">
+      <img
+        src="assets/aboutus3.png"
+        alt="Business Graphic"
+      />
+      <h3>Businesses</h3>
+      <p>
+        Whether you own a new business or you’ve been established for years,
+        figure out how the Yerli can help your business.
+      </p>
+      <a href="forbusinesses.html">
+        <button class="cartoon-button" type="button">
+          The Yerli for business owners ➜
+        </button>
+      </a>
+    </div>
+    <div class="block1">
+      <img
+        src="assets/index2.png"
+        alt="User Graphic"
+      />
+      <h3>Users</h3>
+      <p>
+        Discover new small businesses in your area, learn how the locals live
+        and support the businesses that deserve it.
+      </p>
+      <a href="forusers.html">
+        <button class="cartoon-button" type="button">
+          The Yerli for users ➜
+        </button>
+      </a>
+    </div>
+    <!---- End For businesses and users ---->
+    <!---- Featured ---->
+    <div id="featured">
+      <br /><br />
+      <button
+        style="float: right; margin-right: 15%;"
+        class="fake-button"
+        type="button"
+      >
+        Featured Businesses
+      </button>
+      <br /><br /><br />
+      <div class="block2">
+        <img
+          src="assets/johnnystavern.png"
+          alt="Johnny's Tavern"
+        />
+        <a href="https://app.theyerli.com/explore">
+          <button class="cartoon-button" type="button">
+            Johnny's Tavern ➜
+          </button>
+        </a>
+      </div>
+      <div class="block2">
+        <img
+          src="assets/seibella.png"
+          alt="Sei Bella"
+        />
+        <a href="https://app.theyerli.com/explore">
+          <button class="cartoon-button" type="button">Sei Bella ➜</button>
+        </a>
+      </div>
+      <div class="block2">
+        <img
+          src="assets/littlebuffaloherbs.png"
+          alt="Little Buffalo Herbs"
+        />
+        <a href="https://app.theyerli.com/explore">
+          <button class="cartoon-button" type="button">Little Buffalo Herbs ➜</button>
+        </a>
+      </div>
+      <!---- End featured ---->
+      <br /><br />
+      <!---- App promotion ---->
+      <img
+        id="app-feed"
+        src="assets/prototypes.png"
+        alt="The Yerli App Feed"
+      />
+      <table class="download-table">
+        <tr>
+          <th>
+            <center>
+                <h3 class="download-now">Download now:</h3>
+            </center>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <center>
+              <a href="https://apps.apple.com/us/app/the-yerli/id1532573222">
+                <button class="download-button" type="button">
+                  <img
+                    class="download-img"
+                    src="assets/appstore.png"
+                  />
+                </button>
+              </a>
+            </center>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <center>
+              <a href="https://play.google.com/store/apps/details?id=com.theyerli">
+                <button class="download-button" type="button">
+                  <img
+                    class="download-img"
+                    src="assets/googleplay.png"
+                  />
+                </button>
+              </a>
+            </center>
+          </td>
+        </tr>
+      </table>
+
+      <!---- End App promotion ---->
+      <br /><br /><br />
+
+      <!---- Beta tester sign up ---->
+      <!-- <div class="beta-tester">
+        <center>
+          <h2>Sign up to be a beta tester:</h2>
+          <script
+            charset="utf-8"
+            type="text/javascript"
+            src="//js.hsforms.net/forms/shell.js"
+          ></script>
+          <script>
+            hbspt.forms.create({
+              portalId: "8967975",
+              formId: "cc436284-f095-48b9-9783-f8b8a313e145"
+            });
+          </script>
+                  <form>
+          <input
+            class="fake-button sign-up"
+            type="email"
+            size="30"
+            placeholder="enter email address..."
+            required
+          />
+          <input
+            class="cartoon-button sign-up"
+            type="submit"
+            value="Sign up ➜"
+          />
+        </form>
+        <p>
+          By entering your email address, you agree to receive commercial
+          messages from the Yerli.
+        </p>
+        <p>
+          You can view our Privacy Policy here and you may unsubscribe at any
+          time.
+        </p>
+        </center>
+      </div> -->
+      <!---- End Beta tester sign up ---->
+      
+    </div>
+    
+    <!---- Footer ---->
+    <footer>
+      <div class="quick-links">
+        <div class="box">
+          <p class="footer-title">Social</p>
+          <a href="https://www.instagram.com/theyerliapp/">Instagram</a> <br />
+          <a href="https://www.facebook.com/TheYerliApp">Facebook</a><br />
+          <a href="https://www.youtube.com/channel/UCutRDOQJikHi6-Z0P-m2JYg"
+            >Wednesday Talks</a
+          ><br />
+          <a
+            href="https://dailycollegian.com/2020/11/two-passionate-umass-students-develop-an-app-to-support-amherst-businesses/"
+            >The Daily Collegian</a
+          ><br />
+        </div>
+        <div class="box">
+          <p class="footer-title">For Businesses</p>
+          <a href="forbusinesses.html">Sign Up</a> <br />
+          <a href="mailto:contact@theyerli.com">Contact Us</a><br />
+        </div>
+        <div class="box">
+          <p class="footer-title">For Users</p>
+          <a href="suggestabusiness.html">Suggest a Business</a><br />
+          <a href="https://app.theyerli.com/">Web App</a><br />
+          <a href="aboutus.html">About Us</a>
+        </div>
+        <div class="box hide">
+          <p id="theYerli">the Yerli.</p>
+          <a class="slogan">Look Local.</a> <br />
+          <a class="slogan">Feel Local.</a><br />
+          <a class="slogan">Experience Local.</a><br />
+        </div>
+      </div>
+    </footer>
+    <!---- End Footer ---->
+  </body>
+</html>

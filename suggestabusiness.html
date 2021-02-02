@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>The Yerli.</title>
+    <link rel="icon" href="assets/Y.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Google fonts-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Georgia"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <script src="script.js"></script>
+    <!-- CSS -->
+    <style>
+      body {
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #002B21;
+        margin: 0;
+      }
+
+      div {
+        display: table;
+      }
+      /*---------------------NAVBAR---------------------*/
+      .navbar {
+        overflow: hidden;
+        background-color: #00EA9C;
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        z-index: 3;
+      }
+      #y {
+        padding-top: 14px;
+        font-size: 25px;
+        font-weight: normal;
+        float: left;
+        margin: 0;
+        text-decoration: none;
+        font-family: "Oleo Script Swash Caps", serif !important;
+      }
+      @media only screen and (max-width: 650px) {
+        #links {
+          display: none;
+        }
+        #icon-bars {
+          display: block;
+          color: white;
+          float: right;
+          padding: 14px 14px;
+        }
+        #icon-x {
+          display: none;
+          color: white;
+          float: right;
+          padding: 14px 14px;
+        }
+        .dropbtn {
+          border: none;
+          outline: none;
+          color: white;
+          text-decoration: none;
+          padding: 14px 14px;
+        }
+        #links-small {
+          font-size: 15px !important;
+          display: none;
+        }
+        #links-small ul {
+          padding-top: 10px;
+          padding-bottom: 8px;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+        }
+        #links-small li {
+          padding: 1%;
+        }
+      }
+      @media only screen and (min-width: 650px) {
+        #links-small {
+          display: none;
+        }
+        #links {
+          float: right;
+          padding-top: 18px;
+        }
+        .dropbtn {
+          border: none;
+          outline: none;
+          color: white;
+          padding: 14px 14px;
+          background-color: inherit;
+          font-size: 17px;
+          text-decoration: none;
+        }
+        #icon-x,
+        #icon-bars {
+          display: none;
+          color: white;
+        }
+      }
+
+      .dropbtn:hover {
+        color: black;
+      }
+
+      .sticky {
+        position: fixed;
+        top: 0;
+        overflow: visible;
+      }
+      /*---------------------END NAVBAR---------------------*/
+
+      /*---------------------FOOTER---------------------*/
+
+      .quick-links {
+        background-color: #F8F8F8;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .box {
+        flex: 1 1 150px; /*  Stretching: */
+        margin: 5px;
+        padding-bottom: 2%;
+        padding-left: 2%;
+        margin-top: 0;
+        
+      }
+      .footer-title {
+        font-weight: bold;
+        padding-bottom: 3px;
+        margin-bottom: 1px;
+      }
+      .slogan:hover {
+        text-decoration: none !important;
+      }
+      #theYerli {
+        font-weight: normal;
+        color: #30C591;
+        font-family: "Oleo Script Swash Caps", serif;
+        font-size: 18px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+      }
+      .quick-links a {
+        text-decoration: none;
+        color: black;
+      }
+      .hide {
+        text-align: right;
+        margin-right: 5%;
+      }
+      .quick-links a:hover {
+        text-decoration: underline;
+      }
+      @media screen and (max-width: 750px) {
+        .hide {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .box {
+          flex: 1 1 100%;
+        }
+      }
+      /*---------------------END FOOTER---------------------*/
+      /*----------------------BUTTONS-----------------------*/
+      .cartoon-button {
+        top: 33vw;
+        position: relative;
+        background-color: white;
+        border: 1.5px solid #002B21;
+        border-radius: 6px;
+        padding: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        font-weight: bold;
+        font-size: medium;
+        box-shadow: 0 4px 0 0 #ffffff, 0 4px 0 1.5px #002B21;
+        outline: none;
+        margin-left: 10%;
+      }
+      @media screen and (max-width: 500px) {
+        .cartoon-button {
+          top: 44vw;
+          margin-left: 25%;
+        }
+      }
+      .cartoon-button:hover {
+        background-color: #002B21;
+        color: white;
+      }
+      .cartoon-button:active {
+        background-color: #002B21;
+        box-shadow: 0 2px #002B21;
+        transform: translateY(1px);
+      }
+      /*---------------------END BUTTONS---------------------*/
+      h1 {
+        font-weight: normal;
+        font-family: "Oleo Script Swash Caps", serif;
+        text-align: left;
+        font-size: 5vw;
+      }
+      .green-background {
+        background-image: url("assets/forusersbackground.png");
+        width: 100%;
+        height: 50vw;
+        background-size: 100% 100%;
+      }
+      .container {
+        width: 100%;
+        float: left;
+        position: relative;
+      }
+      .white {
+        width: 100%;
+        color: white;
+        position: absolute;
+        z-index: 2;
+        top: 51px;
+        left: 54px;
+      }
+      .black {
+        width: 100%;
+        color: black;
+        position: absolute;
+        z-index: 1;
+        top: 54px;
+        left: 50px;
+      }
+      .green-background img {
+        float: right;
+        width: 45%;
+      }
+      @media screen and (max-width: 500px) {
+        .white {
+          top: 25px;
+          left: 0px;
+        }
+        .black {
+          top: 27.5px;
+          left: -2.5px;
+        }
+        .black h1,
+        .white h1 {
+          font-size: 30px;
+          text-align: center;
+        }
+        .green-background {
+          height: 65vw;
+        }
+        .green-background img {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <br /><br /><br /><br /><br />
+    <!---- Navbar ---->
+    <div class="navbar sticky">
+      <a class="dropbtn" href="index.html"
+        ><h1 class="dropbtn" id="y">
+          the Yerli.
+        </h1></a
+      >
+
+      <a id="icon-bars" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a id="icon-x" onclick="myFunction()">
+        <i class="fa fa-times"></i>
+      </a>
+      <div id="links">
+        <a class="dropbtn" href="aboutus.html">About Us</a>
+
+        <a class="dropbtn" href="forbusinesses.html">For Businesses</a>
+
+        <a class="dropbtn" href="forusers.html">For Users</a>
+      </div>
+      <div id="links-small">
+        <br /><br />
+        <ul>
+          <li>
+            <a class="dropbtn" href="aboutus.html">About Us</a>
+          </li>
+          <li>
+            <a class="dropbtn" href="forbusinesses.html">For Businesses</a>
+          </li>
+          <li>
+            <a class="dropbtn" href="forusers.html">For Users</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!---- End Navbar ---->
+    <!---- Main Content ---->
+    <div class="green-background">
+      <div class="container">
+        <div class="black">
+          <h1>suggest a business to be</h1>
+          <h1>featured on the Yerli app</h1>
+        </div>
+        <div class="white">
+          <h1>suggest a business to be</h1>
+          <h1>featured on the Yerli app</h1>
+        </div>
+        <a href="https://share.hsforms.com/1yVWUTuaYTaScvCLCzXWF_g5c7qf">
+          <button class="cartoon-button" type="button">
+            Suggest a business ➜
+          </button>
+        </a>
+      </div>
+      <img
+        src="assets\mail.png"
+        alt="Mail graphic"
+      />
+    </div>
+    <!---- End Main Content ---->
+    <br /><br />
+    <!---- Footer ---->
+    <footer>
+      <div class="quick-links">
+        <div class="box">
+          <p class="footer-title">Social</p>
+          <a href="https://www.instagram.com/theyerliapp/">Instagram</a> <br />
+          <a href="https://www.facebook.com/TheYerliApp">Facebook</a><br />
+          <a href="https://www.youtube.com/channel/UCutRDOQJikHi6-Z0P-m2JYg"
+            >Wednesday Talks</a
+          ><br />
+          <a
+            href="https://dailycollegian.com/2020/11/two-passionate-umass-students-develop-an-app-to-support-amherst-businesses/"
+            >The Daily Collegian</a
+          ><br />
+        </div>
+        <div class="box">
+          <p class="footer-title">For Businesses</p>
+          <a href="forbusinesses.html">Sign Up</a> <br />
+          <a href="mailto:contact@theyerli.com">Contact Us</a><br />
+        </div>
+        <div class="box">
+          <p class="footer-title">For Users</p>
+          <a href="suggestabusiness.html">Suggest a Business</a><br />
+          <a href="https://app.theyerli.com/">Web App</a><br />
+          <a href="aboutus.html">About Us</a>
+        </div>
+        <div class="box hide">
+          <p id="theYerli">the Yerli.</p>
+          <a class="slogan">Look Local.</a> <br />
+          <a class="slogan">Feel Local.</a><br />
+          <a class="slogan">Experience Local.</a><br />
+        </div>
+      </div>
+    </footer>
+    <!---- End Footer ---->
+  </body>
+</html>
